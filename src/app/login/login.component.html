@@ -1,0 +1,13 @@
+<body>
+    <div class="main-content">
+        <form class="form" #userDetails="ngForm">
+            <h1>Login</h1>
+            <input type="text" name="username" placeholder="Username"
+            required [(ngModel)]=loginData.userName>
+            <input type="password" name="password" placeholder="Password"
+            required [(ngModel)]= loginData.password>
+            <button type="submit" routerLink="/register" class="btn btn-danger">SignUp</button>
+            <button type="submit" (click)= "onLogin()" routerLink="/home" class="btn btn-danger">Login</button>
+        </form>
+    </div>
+</body>

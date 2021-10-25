@@ -1,0 +1,42 @@
+<div class="main-content">
+    <div class="header-content">
+
+        <div class="address-detail-text">
+            Address-Book Details
+        </div>
+        <a class="add-button" routerLink="/add"> +Add-Contact </a>
+    </div>
+</div>
+
+<table id="table-display" class="table">
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>PinCode</th>
+        <th>PhoneNumber</th>
+        <th>Email</th>
+    </tr>
+
+    <tr *ngFor="let contacts of contactsDetails">
+
+        <td>{{contacts.contactId}}</td>
+        <td>{{contacts.firstName}}</td>
+        <td>{{contacts.lastName}}</td>
+        <td>{{contacts.address}}</td>
+        <td>{{contacts.city}}</td>
+        <td>{{contacts.state}}</td>
+        <td>{{contacts.zip}}</td>
+        <td>{{contacts.phoneNumber}}</td>
+        <td>{{contacts.email}}</td>
+
+        <td>
+            <td>
+                <a class="fevcon" (click)="remove(contacts.contactId)"> <i class="fas fa-trash-alt"></i></a>
+                <a class="fevcon" (click)="edit(contacts.contactId)" > <i class="fas fa-edit"></i></a>
+            </td>
+    </tr>
+</table>
