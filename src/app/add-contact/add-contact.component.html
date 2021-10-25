@@ -50,12 +50,12 @@
 
     <div class="buttonParent">
         <a class="resetButton 
-            button cancelButton" routerLink="/home">Cancel</a>
+            button cancelButton" routerLink="/home" class="btn btn-danger">Cancel</a>
             <div class="submit-reset">
-                <button class="button" *ngIf="this.getId!=0" (click)="update()">Update</button> &nbsp;
+                <button class="button" *ngIf="this.getId!=0" (click)="update()" class="btn btn-danger">Update</button> &nbsp;
                 <button class="button submitButton" id="submitButton"
-                (click)="onSubmit()" type="submit">Submit</button>
-                <button type="reset" class="resetButton button">Reset</button>
+                (click)="onSubmit()" type="submit" class="btn btn-danger">Submit</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
             </div>
     </div>
 </form>
